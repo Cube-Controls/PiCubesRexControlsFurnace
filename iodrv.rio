@@ -1,0 +1,154 @@
+Modbus {
+  Name                    "/dev/ttyAMA0"
+  BaudRate                9600
+  Parity                  0
+  SpaceTime               0
+  Timeout                 1000
+  Flags                   0
+  Gap                     20000
+  #GUID                   94b99670-f39d-4a1f-9d24-ec986de7e42f
+  Item {
+    Name                    RoomTemp
+    SlaveAdr                1
+    RegisterAdr             0
+    Type                    0x00000204
+    Count                   1
+    Period                  5000
+  }
+  Item {
+    Name                    EnableClock
+    SlaveAdr                1
+    RegisterAdr             10
+    Type                    0x00000304
+    Count                   1
+    Period                  10000
+  }
+  Item {
+    Name                    ClockHours
+    SlaveAdr                1
+    RegisterAdr             11
+    Type                    0x00000304
+    Count                   1
+    Period                  10000
+  }
+  Item {
+    Name                    ClockMinutes
+    SlaveAdr                1
+    RegisterAdr             12
+    Type                    0x00000304
+    Count                   1
+    Period                  10000
+  }
+  Item {
+    Name                    EnableFanIcon
+    SlaveAdr                1
+    RegisterAdr             15
+    Type                    0x00000304
+    Count                   1
+    Period                  10000
+  }
+  Item {
+    Name                    EnableOccIcon
+    SlaveAdr                1
+    RegisterAdr             20
+    Type                    0x00000304
+    Count                   1
+    Period                  10000
+  }
+  Item {
+    Name                    EnableEditSP
+    SlaveAdr                1
+    RegisterAdr             30
+    Type                    0x00000304
+    Count                   1
+    Period                  10000
+  }
+  Item {
+    Name                    EnableFanMode
+    SlaveAdr                1
+    RegisterAdr             35
+    Type                    0x00000304
+    Count                   1
+    Period                  10000
+  }
+  Item {
+    Name                    EnableHVACMode
+    SlaveAdr                1
+    RegisterAdr             40
+    Type                    0x00000304
+    Count                   1
+    Period                  10000
+  }
+  Item {
+    Name                    MaxSetPt
+    SlaveAdr                1
+    RegisterAdr             32
+    Type                    0x00000304
+    Count                   1
+    Period                  10000
+  }
+  Item {
+    Name                    MinSetPt
+    SlaveAdr                1
+    RegisterAdr             33
+    Type                    0x00000304
+    Count                   1
+    Period                  10000
+  }
+  Item {
+    Name                    SetPoint
+    SlaveAdr                1
+    RegisterAdr             31
+    Type                    0x00000304
+    Count                   1
+    Period                  5000
+  }
+  Item {
+    Name                    FanMode
+    SlaveAdr                1
+    RegisterAdr             36
+    Type                    0x00000304
+    Count                   1
+    Period                  10000
+  }
+  Item {
+    Name                    HVACMode
+    SlaveAdr                1
+    RegisterAdr             41
+    Type                    0x00000304
+    Count                   1
+    Period                  10000
+  }
+  Item {
+    Name                    FanStatus
+    SlaveAdr                1
+    RegisterAdr             16
+    Type                    0x00000304
+    Count                   1
+    Period                  5000
+  }
+  Item {
+    Name                    SystemHVAC
+    SlaveAdr                1
+    RegisterAdr             4
+    Type                    0x00000304
+    Count                   1
+    Period                  5000
+  }
+  Item {
+    Name                    SystemRun
+    SlaveAdr                1
+    RegisterAdr             5
+    Type                    0x00000304
+    Count                   1
+    Period                  5000
+  }
+  Item {
+    Name                    SetPointSend
+    SlaveAdr                1
+    RegisterAdr             31
+    Type                    0x00000304
+    Count                   1
+    Period                  5000
+  }
+}
