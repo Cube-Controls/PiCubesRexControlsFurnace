@@ -18,23 +18,34 @@ long i2c_register_address;
 long i2c_write_count;
 long i2c_read_count;
 long i2c_ret_fun;
+double last_time;
 
 long init(void)
 {
-    i2c_bus_handle = Open(I2CDEV_FNAME); // open I2C device
+
     i2c_chip_address = 0x1C; // 7-bit address of the I2C device
+	
+	last_time = CurrentTime();
 
     return 0;
 }
 
 long main(void)
 {
+
+    if (ElapsedTime(last_time) < 1) return 0;
+
+    i2c_bus_handle = Open(I2CDEV_FNAME); // open I2C device
+	
     // Sending I2C
     i2c_bufTx[0] = (module_address-1)*8+(output_number-1)*2;
     i2c_bufTx[1] = output_value;
     i2c_write_count = 2;
     i2c_read_count = 0;
     i2c_ret_fun = I2C(i2c_bus_handle, i2c_chip_address, i2c_bufTx, i2c_write_count, i2c_bufRx, i2c_read_count);
-
+	
+	Close(i2c_bus_handle);
+	
+	last_time = CurrentTime();
     return 0;
 }

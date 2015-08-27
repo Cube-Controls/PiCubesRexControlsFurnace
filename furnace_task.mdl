@@ -334,7 +334,7 @@ Model {
       BlockType               Reference
       Name                    "CNI20"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [1465, 538, 1485, 552]
+      Position                [1440, 538, 1460, 552]
       SourceBlock             "mathlib/CNI"
       icn                     1
       #GUID                   fe5eda03-432a-42fb-9231-e4038bc22dc2
@@ -343,7 +343,7 @@ Model {
       BlockType               Reference
       Name                    "CNI21"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [1465, 563, 1485, 577]
+      Position                [1440, 563, 1460, 577]
       SourceBlock             "mathlib/CNI"
       icn                     4
       #GUID                   4891ebca-ab81-4878-8320-87ebc3f17a98
@@ -352,7 +352,7 @@ Model {
       BlockType               Reference
       Name                    "CNI22"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [1465, 588, 1485, 602]
+      Position                [1440, 588, 1460, 602]
       SourceBlock             "mathlib/CNI"
       icn                     0
       #GUID                   c983290c-c112-4775-80cd-1a6533810dee
@@ -933,7 +933,7 @@ Model {
       BlockType               Reference
       Name                    "writeDO4"
       Ports                   [17, 17, 0, 0, 0]
-      Position                [1550, 541, 1600, 719]
+      Position                [1525, 541, 1575, 719]
       SourceBlock             "speclib/REXLANG"
       SID                     4
       LibraryVersion          "1.88"
@@ -1595,10 +1595,10 @@ Model {
     Line {
       SrcBlock                "TIMER_1"
       SrcPort                 1
-      Points                  [125, 0]
+      Points                  [25, 0; 0, -30]
       DstBlock                "writeDO2"
       DstPort                 4
-      #GUID                   5a68e650-6a1b-4ebd-99b4-7ffb8e9c6d54
+      #GUID                   31ae6b47-7786-4400-9a7a-45ced4dc7be4
     }
     Line {
       SrcBlock                "TIMER_2"
@@ -1606,15 +1606,15 @@ Model {
       Points                  [0, -30]
       DstBlock                "writeDO3"
       DstPort                 4
-      #GUID                   9c42780d-d15f-4541-8442-7799047c3e11
+      #GUID                   9bc7934c-ce1c-4430-b5b5-761fe979440a
     }
     Line {
       SrcBlock                "TIMER_3"
       SrcPort                 1
-      Points                  [0, -20]
+      Points                  [0, -15; 120, 0; 0, -5]
       DstBlock                "writeDO1"
       DstPort                 4
-      #GUID                   82781b40-0de3-4a30-a4f1-653598bff547
+      #GUID                   38a8509c-ae89-4e22-9a6f-c1ccee19da00
     }
     Annotation {
       Position                [1170, 210]
@@ -1673,7 +1673,7 @@ Model {
       #GUID                   092f134b-8c7b-4888-906c-3b6b65af39cd
     }
     Annotation {
-      Position                [1545, 515]
+      Position                [1520, 515]
       Text                    "Spare"
       FontWeight              "bold"
       FontSize                16
